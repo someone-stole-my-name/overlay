@@ -62,9 +62,6 @@ src_prepare() {
 
 	sed -e 's|OUTPUT="${CIRRUS_TAG:.*|OUTPUT='v${PV}'|' \
 		-i hack/get_release_info.sh || die
-
-	# Remove UserAgent
-	sed -i '/\[youtube\]/d' /path/to/file
 }
 
 src_compile() {
