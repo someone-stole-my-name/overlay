@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>someone-stole-my-name</name>
+		<description>Personal Overlay</description>
+		<owner>
+			<email>chn2guevara@gmail.com</email>
+		</owner>
+		<source type="git">https://github.com/someone-stole-my-name/overlay.git</source>
+	</repo>
+</repositories>
