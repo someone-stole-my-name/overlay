@@ -24,8 +24,7 @@ RESTRICT="test"
 RDEPEND="${RDEPEND}
 	app-arch/libarchive
 	net-misc/curl
-	virtualbox? ( || ( app-emulation/virtualbox app-emulation/virtualbox-bin ) )
-	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
+	virtualbox? ( || ( app-emulation/virtualbox app-emulation/virtualbox-bin ) )"
 
 ruby_add_rdepend "
 	>=dev-ruby/bcrypt_pbkdf-1.0.0
@@ -81,8 +80,6 @@ all_ruby_install() {
 	# directory for plugins.json
 	keepdir /var/lib/vagrant
 
-	if use vim-syntax; then
-		insinto /usr/share/vim/vimfiles/syntax/
-		doins contrib/vim/vagrantfile.vim
-	fi
+	insinto /usr/share/vim/vimfiles/syntax/
+	doins contrib/vim/vagrantfile.vim
 }
