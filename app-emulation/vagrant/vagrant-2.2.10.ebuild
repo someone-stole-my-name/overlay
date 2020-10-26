@@ -18,7 +18,7 @@ SRC_URI="https://github.com/hashicorp/vagrant/archive/v${PV}.tar.gz -> ${P}.tar.
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+virtualbox vim-syntax"
+IUSE="+virtualbox"
 RESTRICT="test"
 
 RDEPEND="${RDEPEND}
