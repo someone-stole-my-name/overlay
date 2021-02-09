@@ -2,7 +2,7 @@
 
 <repositories version="1.0">
 	<repo priority="50" quality="experimental" status="unofficial">
-		<name>someone-stole-my-name-overlay</name>
+		<name>someone-stole-my-name</name>
 		<description>Personal Overlay</description>
 		<owner>
 			<email>chn2guevara@gmail.com</email>
