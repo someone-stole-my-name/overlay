@@ -11,7 +11,7 @@ DESCRIPTION="NetworkManager Fortinet SSLVPN compatible plugin"
 HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
 
 EGIT_COMMIT=9688d63ecacec97d0c9217281eb7b85053f1f4a1
-EGIT_REPO_URI=https://gitlab.gnome.org/emelenas/NetworkManager-fortisslvpn.git
+EGIT_REPO_URI=https://gitlab.gnome.org/GNOME/NetworkManager-fortisslvpn.git
 SRC_URI=
 LICENSE="GPL-2+"
 SLOT="0"
@@ -34,6 +34,11 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.19
 	virtual/pkgconfig
 "
+
+PATCHES=(
+	# https://bugs.archlinux.org/task/65644
+	"${FILESDIR}"/NetworkManager-fortisslvpn-openvpn-1_11.patch
+)
 
 src_configure() {
 	gnome2_src_configure \
