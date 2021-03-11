@@ -35,10 +35,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-PATCHES=(
-	# https://bugs.archlinux.org/task/65644
-	"${FILESDIR}"/NetworkManager-fortisslvpn-openvpn-1_11.patch
-)
+# PATCHES=(
+# 	# https://bugs.archlinux.org/task/65644
+# 	"${FILESDIR}"/NetworkManager-fortisslvpn-openvpn-1_11.patch
+# )
 
 src_configure() {
 	gnome2_src_configure \
