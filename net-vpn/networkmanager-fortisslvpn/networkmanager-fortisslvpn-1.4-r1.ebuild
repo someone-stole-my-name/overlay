@@ -10,7 +10,7 @@ inherit gnome2 git-r3 autotools
 DESCRIPTION="NetworkManager Fortinet SSLVPN compatible plugin"
 HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
 
-EGIT_COMMIT=9688d63ecacec97d0c9217281eb7b85053f1f4a1
+EGIT_BRANCH=1.4-rc1
 EGIT_REPO_URI=https://gitlab.gnome.org/GNOME/NetworkManager-fortisslvpn.git
 SRC_URI=
 LICENSE="GPL-2+"
