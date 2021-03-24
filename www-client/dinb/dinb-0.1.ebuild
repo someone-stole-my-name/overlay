@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit perl-module desktop
+inherit perl-module desktop xdg-utils
 
 DESCRIPTION="Thin layer around xdg to open URLs with specific browsers"
 HOMEPAGE="https://github.com/someone-stole-my-name/dinb"
@@ -24,4 +24,14 @@ DEPEND="${RDEPEND}
 src_install() {
 	perl-module_src_install
 	domenu dinb.desktop
+}
+
+pkg_postinst() {
+	xdg_mimeinfo_database_update
+	xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	xdg_mimeinfo_database_update
+	xdg_desktop_database_update
 }
