@@ -33,7 +33,7 @@ pkg_nofetch() {
 
 src_unpack() {
 	default
-	sh ./"${PN}"-"${PV}".run --noexec --target "${P}"
+	sh ./"${PN}"-"${PV}"-55.153.run --noexec --target "${P}"
 }
 
 src_install() {
