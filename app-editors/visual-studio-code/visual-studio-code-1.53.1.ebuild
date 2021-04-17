@@ -48,7 +48,7 @@ src_install(){
 	dosym "${DEST}/bin/code" "/usr/bin/${PN}"
 	dosym "${DEST}/bin/code" "/usr/bin/vscode"
 	make_desktop_entry "vscode" "Visual Studio Code" "${PN}" "Development;IDE"
-	newicon "${FILESDIR}/${PN}.png" "${PN}"
+	doicon "${FILESDIR}/${PN}.png"
 	fperms +x "${DEST}/code"
 	fperms +x "${DEST}/bin/code"
 #	fperms +x "${DEST}/libnode.so"
