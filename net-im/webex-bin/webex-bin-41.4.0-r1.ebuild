@@ -7,7 +7,7 @@ inherit rpm desktop
 
 DESCRIPTION="Webex for Linux"
 HOMEPAGE="https://www.webex.com"
-SRC_URI="Webex_18172.rpm"
+SRC_URI="Webex_18405.rpm"
 
 SLOT="0"
 KEYWORDS="~amd64"
