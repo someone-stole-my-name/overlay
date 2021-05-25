@@ -7,7 +7,7 @@ inherit rpm desktop
 
 DESCRIPTION="Webex for Linux"
 HOMEPAGE="https://www.webex.com"
-SRC_URI="Webex_41.5.0.18705.rpm"
+SRC_URI="https://binaries.webex.com/WebexDesktop-CentOS-Official-Package/Webex.rpm"
 
 SLOT="0"
 KEYWORDS="~amd64"
@@ -15,16 +15,8 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"
-RESTRICT="fetch strip"
+RESTRICT="strip"
 MY_PN="Webex"
-
-pkg_nofetch() {
-    einfo "Please download ${A} from the following URL:"
-    einfo "https://drive.google.com/drive/u/1/folders/1PJpWiWovaxWrgE6XUEoDnwGzhnshJCnd"
-    einfo ""
-    einfo "download file named ${SRC_URI} and place it into"
-    einfo " your DISTDIR directory."
-}
 
 src_install() {
     insinto "/opt/${MY_PN}"
