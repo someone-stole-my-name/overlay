@@ -15,6 +15,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
 SRC_URI=""
 EGIT_REPO_URI="https://gitlab.gnome.org/emelenas/NetworkManager-fortisslvpn.git"
 EGIT_CHECKOUT_DIR="${WORKDIR}/NetworkManager-fortisslvpn-9999"
+EGIT_BRANCH="2fa"
 
 LICENSE="GPL-2+"
 SLOT="0"
