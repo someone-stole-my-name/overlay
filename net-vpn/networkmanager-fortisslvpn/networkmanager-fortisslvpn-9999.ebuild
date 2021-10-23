@@ -13,9 +13,9 @@ DESCRIPTION="NetworkManager Fortinet SSLVPN compatible plugin"
 HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
 
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/someone-stole-my-name/NetworkManager-fortisslvpn.git"
+EGIT_REPO_URI="https://gitlab.gnome.org/emelenas/NetworkManager-fortisslvpn.git"
 EGIT_CHECKOUT_DIR="${WORKDIR}/NetworkManager-fortisslvpn-9999"
-EGIT_BRANCH="2fa-fixed"
+EGIT_BRANCH="2fa"
 
 LICENSE="GPL-2+"
 SLOT="0"
