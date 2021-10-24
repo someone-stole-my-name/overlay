@@ -30,6 +30,10 @@ RDEPEND="
 	dbus? ( sys-apps/dbus )
 "
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-2062-set-explicit-startupwmclass-in-launcher.patch
+)
+
 QA_PREBUILD="*"
 S="${WORKDIR}/${MY_PN}"
 
@@ -43,13 +47,19 @@ src_prepare(){
 }
 
 src_install(){
-	mkdir -p "${ED%/}"/opt/${MY_PN}
-	cp -r . "${ED%/}"/opt/${MY_PN}
-	rm "${ED%/}"/opt/${MY_PN}/${MY_PN}.desktop
-	domenu ${MY_PN}.desktop
+	insinto /opt/${MY_PN}
+	doins -r Packages Icon
+	doins changelog.txt sublime_merge.desktop
+
+	exeinto /opt/${MY_PN}
+	doexe crash_reporter git-credential-sublime ssh-askpass-sublime sublime_merge
+
+	make_wrapper smerge "/opt/${MY_PN}/sublime_merge"
+	domenu sublime_merge.desktop
+
 	local size
 	for size in 16 32 48 128 256; do
 		doicon --size "${size}" Icon/${size}x${size}/${PN}.png
 	done
-	make_wrapper smerge "/opt/${MY_PN}/sublime_merge"
+	
 }

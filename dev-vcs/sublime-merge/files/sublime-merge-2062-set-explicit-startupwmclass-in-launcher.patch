@@ -1,0 +1,9 @@
+--- a/sublime_merge.desktop  2021-10-25 00:51:40.693028367 +0200
++++ b/sublime_merge.desktop   2021-10-25 00:54:05.813244280 +0200
+@@ -9,6 +9,7 @@
+ MimeType=text/plain;
+ Icon=sublime-merge
+ Categories=Development;
++StartupWMClass=sublime_merge
+ StartupNotify=true
+ Actions=new-window;
