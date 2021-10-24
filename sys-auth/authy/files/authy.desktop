@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Authy
+Exec=sh -c "electron /opt/authy/net45/resources/app.asar"
+Icon=/opt/authy/icon.png
+Type=Application
+StartupWMClass=Authy Desktop
+Categories=Utility;

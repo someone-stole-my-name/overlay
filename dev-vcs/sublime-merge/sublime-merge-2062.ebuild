@@ -51,5 +51,5 @@ src_install(){
 	for size in 16 32 48 128 256; do
 		doicon --size "${size}" Icon/${size}x${size}/${PN}.png
 	done
-	make_wrapper smerge "/opt/${MY_PN}/sublime_merge \"\$0\""
+	make_wrapper smerge "/opt/${MY_PN}/sublime_merge"
 }
